@@ -25,8 +25,8 @@ abstract class BaseTest extends TestCase
         Blog\loadSeeds($this->factory);
     }
 
-    /* public function tearDown(): void */
-    /* { */
-    /*     $this->capsule->getConnection()->rollbackTransaction(); */
-    /* } */
+    public function tearDown(): void
+    {
+        $this->capsule->getConnection()->rollback();
+    }
 }

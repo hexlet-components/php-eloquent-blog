@@ -14,6 +14,17 @@ class BlogTest extends BaseTest
         $user->last_name = $this->faker->lastName;
         $user->password = 'lala';
         $user->save();
-        print_r($user->toArray());
+        $this->assertNotNull($user->id);
+    }
+
+    public function testCreatePost()
+    {
+        $post = new models\Post();
+        $post->title = $this->faker->sentence;
+        $post->body = $this->faker->text;
+        $post->user()->associate(models\User::first());
+        $post->save();
+        $this->assertNotNull($post->user);
+        print_r($post->toArray());
     }
 }
