@@ -2,21 +2,18 @@
 
 namespace Php\Eloquent\Blog\Tests;
 
-use \PHPUnit\Framework\TestCase;
-use function Php\Eloquent\Blog\Blog\bootstrap;
-use Illuminate\Database\Capsule\Manager as Capsule;
-use Php\Eloquent\Blog\models\User;
+use Php\Eloquent\Blog\models;
 
-class BlogTest extends TestCase
+class BlogTest extends BaseTest
 {
-    public function setUp(): void
+    public function testCreateUser()
     {
-        bootstrap();
-    }
-
-    public function testExample()
-    {
-        $users = User::where('votes', '>', 1)->get();
-        print_r($users);
+        $user = new models\User();
+        $user->email = $this->faker->email;
+        $user->first_name = $this->faker->firstName;
+        $user->last_name = $this->faker->lastName;
+        $user->password = 'lala';
+        $user->save();
+        print_r($user->toArray());
     }
 }
