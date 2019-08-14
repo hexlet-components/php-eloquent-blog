@@ -25,6 +25,5 @@ class BlogTest extends BaseTest
         $post->user()->associate(models\User::first());
         $post->save();
         $this->assertNotNull($post->user);
-        print_r($post->toArray());
     }
 }
