@@ -16,7 +16,8 @@
             "Php\\Package\\Blog\\Tests\\": "tests"
         },
         "files": [
-          "src/Blog.php"
+          "src/setup.php",
+          "src/schema.php"
         ]
     },
     "require": {

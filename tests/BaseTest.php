@@ -2,8 +2,8 @@
 
 namespace Php\Eloquent\Blog\Tests;
 
-use Php\Eloquent\Blog\Blog;
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Php\Eloquent\Blog\setup;
+use Php\Eloquent\Blog\schema;
 use \PHPUnit\Framework\TestCase;
 
 abstract class BaseTest extends TestCase
@@ -18,11 +18,11 @@ abstract class BaseTest extends TestCase
             'factory' => $this->factory,
             'capsule' => $this->capsule,
             'faker' => $this->faker
-        ] = Blog\bootstrap();
+        ] = setup\bootstrap();
 
         $this->capsule->getConnection()->beginTransaction();
-        Blog\loadScheme();
-        Blog\loadSeeds($this->factory);
+        schema\load();
+        setup\loadSeeds($this->factory);
     }
 
     public function tearDown(): void
