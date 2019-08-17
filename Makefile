@@ -3,3 +3,6 @@ test:
 
 setup:
 	composer install
+
+reset:
+	rm db.sqlite
