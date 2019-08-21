@@ -15,25 +15,25 @@ function bootstrap()
 
     $capsule = new Capsule();
     $capsule->addConnection([
-      'driver'    => 'sqlite',
-      'database'  => $dbPath,
-      /* 'username'  => 'root', */
-      /* 'password'  => 'password', */
-      /* 'charset'   => 'utf8', */
-      /* 'collation' => 'utf8_unicode_ci', */
-      /* 'prefix'    => '', */
+        'driver'    => 'sqlite',
+        'database'  => $dbPath,
+        /* 'username'  => 'root', */
+        /* 'password'  => 'password', */
+        /* 'charset'   => 'utf8', */
+        /* 'collation' => 'utf8_unicode_ci', */
+        /* 'prefix'    => '', */
     ]);
     // Make this Capsule instance available globally via static methods... (optional)
     $capsule->setAsGlobal();
 
-    $capsule->setEventDispatcher(new Dispatcher(new Container));
+    $capsule->setEventDispatcher(new Dispatcher(new Container()));
 
     // Setup the Eloquent ORM... (optional; unless you've used setEventDispatcher())
     $capsule->bootEloquent();
 
     $capsule->connection()->listen(function ($query) {
-      echo "\n";
-      var_dump($query->sql);
+        echo "\n";
+        var_dump($query->sql);
     });
 
     $faker = \Faker\Factory::create();

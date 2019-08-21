@@ -24,4 +24,3 @@ $factory->define(PostTag::class, function (Faker $faker) {
         }
     ];
 });
-

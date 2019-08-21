@@ -6,3 +6,6 @@ setup:
 
 reset:
 	rm db.sqlite
+
+lint:
+	phpcs -- --standard=PSR12 src tests
