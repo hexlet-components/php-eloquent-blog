@@ -16,7 +16,7 @@
             "Php\\Package\\Blog\\Tests\\": "tests"
         },
         "files": [
-          "src/setup.php",
+          "src/loaders.php",
           "src/schema.php"
         ]
     },

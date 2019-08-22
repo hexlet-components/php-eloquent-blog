@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Eloquent\Blog\setup;
+namespace Php\Eloquent\Blog\loaders;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Eloquent\Factory;

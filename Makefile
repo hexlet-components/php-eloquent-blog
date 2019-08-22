@@ -1,8 +1,13 @@
 test:
 	composer run-script phpunit tests
 
-setup:
+setup: reset install db-prepare
+
+install:
 	composer install
+
+db-prepare:
+	php db-prepare.php
 
 reset:
 	rm db.sqlite
