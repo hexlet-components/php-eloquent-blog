@@ -1,8 +1,8 @@
 <?php
 
-namespace Php\Eloquent\Blog\Tests;
+namespace App\Tests;
 
-use Php\Eloquent\Blog\loaders;
+use App\config\loaders;
 use \PHPUnit\Framework\TestCase;
 
 abstract class BaseTest extends TestCase

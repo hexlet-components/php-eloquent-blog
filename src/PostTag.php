@@ -1,8 +1,8 @@
 <?php
 
-namespace Php\Eloquent\Blog\models;
+namespace App;
 
-class Tag extends \Illuminate\Database\Eloquent\Model
+class PostTag extends \Illuminate\Database\Eloquent\Model
 {
     public function tag()
     {

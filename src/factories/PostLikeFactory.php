@@ -1,7 +1,6 @@
 <?php
 
 use Faker\Generator as Faker;
-use Php\Eloquent\Blog\models;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +13,13 @@ use Php\Eloquent\Blog\models;
 |
 */
 
-$factory->define(models\PostLike::class, function (Faker $faker) {
+$factory->define(App\PostLike::class, function (Faker $faker) {
     return [
         'post_id' => function () {
-            return models\Post::first()->id;
+            return App\Post::first()->id;
         },
         'creator_id' => function () {
-            return models\User::first()->id;
+            return App\User::first()->id;
         }
     ];
 });

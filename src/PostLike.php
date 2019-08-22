@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Eloquent\Blog\models;
+namespace App;
 
 class PostLike extends \Illuminate\Database\Eloquent\Model
 {

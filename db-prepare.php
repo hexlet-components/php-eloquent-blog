@@ -1,7 +1,7 @@
 <?php
 
-use Php\Eloquent\Blog\schema;
-use Php\Eloquent\Blog\loaders;
+use App\config\schema;
+use App\config\loaders;
 
 require 'vendor/autoload.php';
 

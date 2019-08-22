@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Eloquent\Blog\models;
+namespace App;
 
 class PostComment extends \Illuminate\Database\Eloquent\Model
 {

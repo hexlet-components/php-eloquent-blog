@@ -1,7 +1,6 @@
 <?php
 
 use Faker\Generator as Faker;
-use Php\Eloquent\Blog\models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +13,7 @@ use Php\Eloquent\Blog\models\User;
 |
 */
 
-$factory->define(User::class, function (Faker $faker) {
+$factory->define(App\User::class, function (Faker $faker) {
     return [
         'first_name' => $faker->firstName,
         'last_name' => $faker->lastName,

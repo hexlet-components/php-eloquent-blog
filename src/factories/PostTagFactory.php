@@ -1,7 +1,6 @@
 <?php
 
 use Faker\Generator as Faker;
-use Php\Eloquent\Blog\models\PostTag;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +16,10 @@ use Php\Eloquent\Blog\models\PostTag;
 $factory->define(PostTag::class, function (Faker $faker) {
     return [
         'post_id' => function () {
-            return models\Post::first()->id;
+            return App\Post::first()->id;
         },
         'tag_id' => function () {
-            return models\Tag::first()->id;
+            return App\Tag::first()->id;
         }
     ];
 });

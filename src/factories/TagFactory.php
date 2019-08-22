@@ -1,7 +1,6 @@
 <?php
 
 use Faker\Generator as Faker;
-use Php\Eloquent\Blog\models\Tag;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +13,7 @@ use Php\Eloquent\Blog\models\Tag;
 |
 */
 
-$factory->define(Tag::class, function (Faker $faker) {
+$factory->define(App\Tag::class, function (Faker $faker) {
     return [
         'name' => $faker->word
     ];

@@ -1,16 +1,15 @@
 <?php
 
-namespace Php\Eloquent\Blog\loaders;
+namespace App\config\loaders;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
-use Php\Eloquent\Blog\models;
 
 function bootstrap()
 {
-    $dbPath = __DIR__ . '/../db.sqlite';
+    $dbPath = __DIR__ . '/../../db.sqlite';
     touch($dbPath);
 
     $capsule = new Capsule();
@@ -44,13 +43,13 @@ function bootstrap()
 
 function loadSeeds($factory)
 {
-    $factory->create(models\User::class);
-    $factory->create(models\Post::class);
-    $factory->create(models\PostLike::class);
-    $factory->create(models\PostComment::class);
+    $factory->create(\App\User::class);
+    $factory->create(\App\Post::class);
+    $factory->create(\App\PostLike::class);
+    $factory->create(\App\PostComment::class);
 }
 
 function loadFactories($faker)
 {
-    return Factory::construct($faker, __DIR__ . '/factories');
+    return Factory::construct($faker, __DIR__ . '/../factories');
 }

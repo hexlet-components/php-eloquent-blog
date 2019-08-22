@@ -1,8 +1,6 @@
 <?php
 
 use Faker\Generator as Faker;
-use Php\Eloquent\Blog\models\Post;
-use Php\Eloquent\Blog\models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +13,12 @@ use Php\Eloquent\Blog\models\User;
 |
 */
 
-$factory->define(Post::class, function (Faker $faker) {
+$factory->define(App\Post::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence,
         'body' => $faker->text,
         'creator_id' => function () {
-            return User::first()->id;
+            return App\User::first()->id;
         }
     ];
 });

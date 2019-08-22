@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Eloquent\Blog\schema;
+namespace App\config\schema;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
