@@ -10,9 +10,9 @@ function load()
         Capsule::schema()->create('users', function ($table) {
             $table->bigIncrements('id');
             $table->string('email')->unique();
-            $table->string('first_name');
-            $table->string('password');
+            $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
+            $table->string('password');
             $table->timestamps();
         });
     }
