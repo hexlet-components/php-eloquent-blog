@@ -17,7 +17,8 @@ $factory->define(App\Post::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence,
         'body' => $faker->text,
-        'creator_id' => function () {
+        'state' => 'draft',
+        'user_id' => function () {
             return App\User::first()->id;
         }
     ];

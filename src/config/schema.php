@@ -19,6 +19,7 @@ function load()
     if (!Capsule::schema()->hasTable('posts')) {
         Capsule::schema()->create('posts', function ($table) {
             $table->bigIncrements('id');
+            $table->string('state');
             $table->string('title');
             $table->text('body');
             $table->bigInteger('user_id');
