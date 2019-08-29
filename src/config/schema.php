@@ -19,11 +19,11 @@ function load()
     if (!Capsule::schema()->hasTable('posts')) {
         Capsule::schema()->create('posts', function ($table) {
             $table->bigIncrements('id');
-            $table->string('state');
+            $table->string('state')->nullable();
             $table->string('title');
             $table->text('body');
-            $table->bigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->bigInteger('creator_id');
+            $table->foreign('creator_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -33,8 +33,8 @@ function load()
             $table->string('body');
             $table->bigInteger('post_id');
             $table->foreign('post_id')->references('id')->on('posts');
-            $table->bigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->bigInteger('creator_id');
+            $table->foreign('creator_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -44,8 +44,8 @@ function load()
             $table->bigIncrements('id');
             $table->bigInteger('post_id');
             $table->foreign('post_id')->references('id')->on('posts');
-            $table->bigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->bigInteger('creator_id');
+            $table->foreign('creator_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

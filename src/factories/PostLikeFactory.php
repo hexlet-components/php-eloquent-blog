@@ -18,7 +18,7 @@ $factory->define(App\PostLike::class, function (Faker $faker) {
         'post_id' => function () {
             return App\Post::first()->id;
         },
-        'user_id' => function () {
+        'creator_id' => function () {
             return App\User::first()->id;
         }
     ];
