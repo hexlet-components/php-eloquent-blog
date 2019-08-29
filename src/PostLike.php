@@ -2,9 +2,11 @@
 
 namespace App;
 
-class PostLike extends \Illuminate\Database\Eloquent\Model
+use \Illuminate\Database\Eloquent\Model;
+
+class PostLike extends Model
 {
-    public function user()
+    public function creator()
     {
         return $this->belongsTo(__NAMESPACE__ . '\User');
     }

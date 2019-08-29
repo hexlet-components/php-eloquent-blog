@@ -2,7 +2,9 @@
 
 namespace App;
 
-class PostTag extends \Illuminate\Database\Eloquent\Model
+use \Illuminate\Database\Eloquent\Model;
+
+class PostTag extends Model
 {
     public function tag()
     {

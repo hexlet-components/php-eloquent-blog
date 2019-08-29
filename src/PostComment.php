@@ -2,11 +2,13 @@
 
 namespace App;
 
-class PostComment extends \Illuminate\Database\Eloquent\Model
+use \Illuminate\Database\Eloquent\Model;
+
+class PostComment extends Model
 {
-    public function user()
+    public function creator()
     {
-        return $this->belongsTo(__NAMESPACE__ . '\User', 'creator_id');
+        return $this->belongsTo(__NAMESPACE__ . '\User');
     }
 
     public function post()

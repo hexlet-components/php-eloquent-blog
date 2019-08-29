@@ -10,11 +10,11 @@ class User extends Model
 
     public function posts()
     {
-        return $this->hasMany(__NAMESPACE__ . '\Post', 'creator_id');
+        return $this->hasMany(__NAMESPACE__ . '\Post');
     }
 
     public function postLikes()
     {
-        return $this->hasMany(__NAMESPACE__ . '\PostLike', 'creator_id');
+        return $this->hasMany(__NAMESPACE__ . '\PostLike');
     }
 }

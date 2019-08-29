@@ -20,8 +20,8 @@ class BlogTest extends BaseTest
         $post = new \App\Post();
         $post->title = $this->faker->sentence;
         $post->body = $this->faker->text;
-        $post->user()->associate(\App\User::first());
+        $post->creator()->associate(\App\User::first());
         $post->save();
-        $this->assertNotNull($post->user);
+        $this->assertNotNull($post->creator);
     }
 }
