@@ -15,7 +15,7 @@ class Post extends Model
 
     public function comments()
     {
-        return $this->hasMany(__NAMESPACE__ . '\PostComments');
+        return $this->hasMany(__NAMESPACE__ . '\PostComment');
     }
 
     public function tags()
@@ -25,6 +25,6 @@ class Post extends Model
 
     public function likes()
     {
-        return $this->hasMany(__NAMESPACE__ . '\PostLikes');
+        return $this->hasMany(__NAMESPACE__ . '\PostLike');
     }
 }
