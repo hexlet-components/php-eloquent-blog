@@ -16,4 +16,4 @@ reset:
 	rm db.sqlite || true
 
 lint:
-	phpcs -- --standard=PSR12 src tests
+	phpcs src tests

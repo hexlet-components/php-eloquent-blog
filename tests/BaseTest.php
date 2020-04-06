@@ -3,7 +3,7 @@
 namespace App\Tests;
 
 use App\config\loaders;
-use \PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 
 abstract class BaseTest extends TestCase
 {
