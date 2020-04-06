@@ -4,9 +4,9 @@
 
 ### Requirements
 
-  * PHP
-  * Composer
-  * Make
+* PHP
+* Composer
+* Make
 
 ### Setup
 
