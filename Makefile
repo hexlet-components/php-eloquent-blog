@@ -16,4 +16,4 @@ reset:
 	rm db.sqlite || true
 
 lint:
-	phpcs src tests
+	composer run-script phpcs src tests
