@@ -1,25 +1,36 @@
 <?php
 
-use Faker\Generator as Faker;
+namespace Database\Factories;
 
-/*
-|--------------------------------------------------------------------------
-| Model Factories
-|--------------------------------------------------------------------------
-|
-| This directory should contain each of the model factory definitions for
-| your application. Factories provide a convenient way to generate new
-| model instances for testing / seeding your application's database.
-|
-*/
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Faker\Factory as Faker;
+use App\Models\{Post, User, PostLike};
 
-$factory->define(App\PostLike::class, function (Faker $faker) {
-    return [
-        'post_id' => function () {
-            return App\Post::first()->id;
-        },
-        'creator_id' => function () {
-            return App\User::first()->id;
-        }
-    ];
-});
+class PostLikeFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = PostLike::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        $faker = Faker::create();
+
+        return [
+            'post_id' => function () {
+                return Post::first()->id;
+            },
+            'creator_id' => function () {
+                return User::first()->id;
+            }
+        ];
+    }
+}

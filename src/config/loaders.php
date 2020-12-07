@@ -35,21 +35,5 @@ function bootstrap()
         var_dump($query->sql);
     });
 
-    $faker = \Faker\Factory::create();
-    $factory = loadFactories($faker);
-
-    return ['capsule' => $capsule, 'factory' => $factory, 'faker' => $faker];
-}
-
-function loadSeeds($factory)
-{
-    $factory->create(\App\User::class);
-    $factory->create(\App\Post::class);
-    $factory->create(\App\PostLike::class);
-    $factory->create(\App\PostComment::class);
-}
-
-function loadFactories($faker)
-{
-    return Factory::construct($faker, __DIR__ . '/../factories');
+    return ['capsule' => $capsule];
 }

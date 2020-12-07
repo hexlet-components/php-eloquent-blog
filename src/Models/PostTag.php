@@ -1,9 +1,14 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-class Tag extends \Illuminate\Database\Eloquent\Model
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class PostTag extends Model
 {
+    use HasFactory;
+
     public function tag()
     {
         return $this->belongsTo(__NAMESPACE__ . '\Tag');

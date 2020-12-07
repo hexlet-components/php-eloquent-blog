@@ -1,5 +1,5 @@
 test:
-	composer run-script phpunit tests
+	composer run-script phpunit -- --colors=always tests
 
 setup: reset install db-prepare
 
