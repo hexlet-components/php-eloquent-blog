@@ -20,7 +20,9 @@ jobs:
         php-version: '7.4'
 
     - name: PHP Security Checker
-      uses: StephaneBour/actions-php-security-checker@1.0
+      uses: StephaneBour/actions-php-security-checker@1.1
+      with:
+        composer-lock: './composer.lock'
 
     - name: Setup project
       run: make setup
