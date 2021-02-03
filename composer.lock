@@ -2067,7 +2067,6 @@
                 "dump"
             ],
             "support": {
-<
                 "source": "https://github.com/symfony/var-dumper/tree/v5.2.3"
             },
             "funding": [
