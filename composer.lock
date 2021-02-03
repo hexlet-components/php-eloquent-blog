@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c718e10cada8d3d4d2ac90db3e7baec",
+    "content-hash": "0b9a1b7edf3d02f87397ca15b6ba99ca",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -153,19 +153,17 @@
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3 || ^7.0"
+                "php": "^7.1 || ^8.0"
+            },
+            "conflict": {
+                "fzaninotto/faker": "*"
             },
             "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4.1",
                 "ext-intl": "*",
-                "phpunit/phpunit": "^4.8.35 || ^5.7",
-                "squizlabs/php_codesniffer": "^2.9.2"
+                "phpunit/phpunit": "^7.5.20 || ^8.5.8 || ^9.4.2"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.9-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Faker\\": "src/Faker/"
@@ -187,6 +185,7 @@
                 "fixtures"
             ],
             "support": {
+
                 "issues": "https://github.com/fzaninotto/Faker/issues",
                 "source": "https://github.com/fzaninotto/Faker/tree/v1.9.2"
             },
@@ -1091,6 +1090,7 @@
                 "terminal"
             ],
             "support": {
+
                 "source": "https://github.com/symfony/console/tree/v5.2.3"
             },
             "funding": [
@@ -1107,6 +1107,7 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2021-01-28T22:06:19+00:00"
         },
         {
@@ -1152,6 +1153,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
+
                 "source": "https://github.com/symfony/finder/tree/v5.2.3"
             },
             "funding": [
@@ -1168,6 +1170,7 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2021-01-28T22:06:19+00:00"
         },
         {
@@ -1737,6 +1740,7 @@
         },
         {
             "name": "symfony/string",
+
             "version": "v5.2.3",
             "source": {
                 "type": "git",
@@ -1800,6 +1804,7 @@
                 "utf8"
             ],
             "support": {
+
                 "source": "https://github.com/symfony/string/tree/v5.2.3"
             },
             "funding": [
@@ -1820,6 +1825,7 @@
         },
         {
             "name": "symfony/translation",
+
             "version": "v5.2.3",
             "source": {
                 "type": "git",
@@ -1893,6 +1899,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
+
                 "source": "https://github.com/symfony/translation/tree/v5.2.3"
             },
             "funding": [
@@ -1991,6 +1998,7 @@
         },
         {
             "name": "symfony/var-dumper",
+
             "version": "v5.2.3",
             "source": {
                 "type": "git",
@@ -2059,6 +2067,7 @@
                 "dump"
             ],
             "support": {
+<
                 "source": "https://github.com/symfony/var-dumper/tree/v5.2.3"
             },
             "funding": [
