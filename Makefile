@@ -1,5 +1,5 @@
 test:
-	composer run-script phpunit -- --colors=always tests
+	composer exec phpunit
 
 setup: reset install db-prepare
 
@@ -16,4 +16,4 @@ reset:
 	rm db.sqlite || true
 
 lint:
-	composer run-script phpcs src tests
+	composer exec phpcs
