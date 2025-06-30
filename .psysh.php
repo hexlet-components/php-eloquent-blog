@@ -6,6 +6,6 @@ loaders\bootstrap();
 
 return [
     'defaultIncludes' => [
-      'vendor/autoload.php'
+        'vendor/autoload.php'
     ],
 ];

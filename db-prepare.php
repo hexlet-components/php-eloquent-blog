@@ -31,7 +31,6 @@ foreach ($users as $user) {
             ->for($users->random(), 'creator')
             ->create();
 
-        // Лайки
         $likedUsers = $users->random(rand(1, 5));
         foreach ($likedUsers as $liker) {
             PostLike::factory()
