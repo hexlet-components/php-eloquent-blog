@@ -6,7 +6,6 @@ use App\Models\{User, Post};
 
 class BlogTest extends BaseTestCase
 {
-
     public function testCreatePost()
     {
         $user = new User();

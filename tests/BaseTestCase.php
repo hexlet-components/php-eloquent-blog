@@ -9,7 +9,6 @@ use Faker\Generator as Faker;
 
 abstract class BaseTestCase extends TestCase
 {
-
     protected Faker $faker;
     protected $capsule;
 
