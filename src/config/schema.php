@@ -49,4 +49,23 @@ function load()
             $table->timestamps();
         });
     }
+
+    if (!Capsule::schema()->hasTable('tags')) {
+        Capsule::schema()->create('tags', function ($table) {
+            $table->bigIncrements('id');
+            $table->string('name')->unique();
+            $table->timestamps();
+        });
+    }
+
+    if (!Capsule::schema()->hasTable('post_tags')) {
+        Capsule::schema()->create('post_tags', function ($table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('post_id');
+            $table->unsignedBigInteger('tag_id');
+            $table->foreign('post_id')->references('id')->on('posts');
+            $table->foreign('tag_id')->references('id')->on('tags');
+            $table->timestamps();
+        });
+    }
 }

@@ -23,7 +23,7 @@ class Post extends Model
 
     public function tags()
     {
-        return $this->hasMany(__NAMESPACE__ . '\Tag');
+        return $this->hasMany(__NAMESPACE__ . '\PostTag');
     }
 
     public function likes()

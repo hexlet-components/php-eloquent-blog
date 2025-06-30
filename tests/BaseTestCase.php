@@ -4,10 +4,13 @@ namespace App\Tests;
 
 use App\config\loaders;
 use PHPUnit\Framework\TestCase;
-use Faker\Factory as Faker;
+use Faker\Factory as FakerFactory;
+use Faker\Generator as Faker;
 
-abstract class BaseTest extends TestCase
+abstract class BaseTestCase extends TestCase
 {
+
+    protected Faker $faker;
     protected $capsule;
 
     public function setUp(): void
@@ -15,7 +18,7 @@ abstract class BaseTest extends TestCase
         ['capsule' => $this->capsule] = loaders\bootstrap();
 
         $this->capsule->getConnection()->beginTransaction();
-        $this->faker = Faker::create();
+        $this->faker = FakerFactory::create();
     }
 
     public function tearDown(): void
