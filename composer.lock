@@ -557,16 +557,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v12.30.1",
+            "version": "v12.34.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "00e843bca35fdde69a158c5234ee7763989f6fb6"
+                "reference": "3ad07bda64019d18fc6fda97fec0b3b7cb6ecae1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/00e843bca35fdde69a158c5234ee7763989f6fb6",
-                "reference": "00e843bca35fdde69a158c5234ee7763989f6fb6",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/3ad07bda64019d18fc6fda97fec0b3b7cb6ecae1",
+                "reference": "3ad07bda64019d18fc6fda97fec0b3b7cb6ecae1",
                 "shasum": ""
             },
             "require": {
@@ -624,7 +624,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-09-17T21:27:34+00:00"
+            "time": "2025-10-10T13:33:40+00:00"
         },
         {
             "name": "illuminate/events",
@@ -860,16 +860,16 @@
         },
         {
             "name": "laravel/serializable-closure",
-            "version": "v2.0.4",
+            "version": "v2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/serializable-closure.git",
-                "reference": "b352cf0534aa1ae6b4d825d1e762e35d43f8a841"
+                "reference": "038ce42edee619599a1debb7e81d7b3759492819"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/b352cf0534aa1ae6b4d825d1e762e35d43f8a841",
-                "reference": "b352cf0534aa1ae6b4d825d1e762e35d43f8a841",
+                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/038ce42edee619599a1debb7e81d7b3759492819",
+                "reference": "038ce42edee619599a1debb7e81d7b3759492819",
                 "shasum": ""
             },
             "require": {
@@ -917,7 +917,7 @@
                 "issues": "https://github.com/laravel/serializable-closure/issues",
                 "source": "https://github.com/laravel/serializable-closure"
             },
-            "time": "2025-03-19T13:51:03+00:00"
+            "time": "2025-10-09T13:42:30+00:00"
         },
         {
             "name": "nesbot/carbon",
