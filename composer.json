@@ -24,14 +24,14 @@
         ]
     },
     "require": {
-        "illuminate/database": "^12",
-        "symfony/finder": "^7.0",
-        "fakerphp/faker": "^1.20",
-        "illuminate/events": "^12",
-        "psy/psysh": "^0.12"
+        "illuminate/database": "^12.39",
+        "symfony/finder": "^7.3.5",
+        "fakerphp/faker": "^1.24.1",
+        "illuminate/events": "^12.39",
+        "psy/psysh": "^0.12.14"
     },
     "require-dev": {
-        "phpunit/phpunit": "^12.0",
-        "squizlabs/php_codesniffer": "^4.0"
+        "phpunit/phpunit": "^12.4.4",
+        "squizlabs/php_codesniffer": "^4.0.1"
     }
 }
