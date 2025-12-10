@@ -17,3 +17,8 @@ reset:
 
 lint:
 	composer exec phpcs
+
+update-deps:
+	composer bump
+	composer update
+	composer outdated

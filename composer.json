@@ -25,13 +25,12 @@
     },
     "require": {
         "illuminate/database": "^12.39",
-        "symfony/finder": "^8.0.0",
         "fakerphp/faker": "^1.24.1",
-        "illuminate/events": "^12.39",
-        "psy/psysh": "^0.12.14"
+        "illuminate/events": "^12.42",
+        "psy/psysh": "^0.12.16"
     },
     "require-dev": {
-        "phpunit/phpunit": "^12.4.4",
+        "phpunit/phpunit": "^12.5.2",
         "squizlabs/php_codesniffer": "^4.0.1"
     }
 }
