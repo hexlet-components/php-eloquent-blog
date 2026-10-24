@@ -1,11 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\config\loaders;
 
-use Illuminate\Database\Capsule\Manager as Capsule;
-use Illuminate\Database\Eloquent\Factory;
-use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
+use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Events\Dispatcher;
 
 function bootstrap()
 {
@@ -14,8 +15,8 @@ function bootstrap()
 
     $capsule = new Capsule();
     $capsule->addConnection([
-        'driver'    => 'sqlite',
-        'database'  => $dbPath,
+        'driver' => 'sqlite',
+        'database' => $dbPath,
         /* 'username'  => 'root', */
         /* 'password'  => 'password', */
         /* 'charset'   => 'utf8', */
@@ -30,10 +31,12 @@ function bootstrap()
     // Setup the Eloquent ORM... (optional; unless you've used setEventDispatcher())
     $capsule->bootEloquent();
 
-    $capsule->connection()->listen(function ($query) {
-        echo "\n";
-        var_dump($query->sql);
-    });
+    $capsule
+        ->connection()
+        ->listen(function ($query) {
+            echo "\n";
+            var_dump($query->sql);
+        });
 
     return ['capsule' => $capsule];
 }

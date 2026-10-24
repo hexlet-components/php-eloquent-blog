@@ -1,10 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Post;
+use App\Models\PostTag;
+use App\Models\Tag;
 use Faker\Factory as Faker;
-use App\Models\{PostTag, Post, Tag};
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PostTagFactory extends Factory
 {
@@ -25,12 +29,8 @@ class PostTagFactory extends Factory
         $faker = Faker::create();
 
         return [
-            'post_id' => function () {
-                return Post::first()->id;
-            },
-            'tag_id' => function () {
-                return Tag::first()->id;
-            }
+            'post_id' => static fn() => Post::first()->id,
+            'tag_id' => static fn() => Tag::first()->id,
         ];
     }
 }

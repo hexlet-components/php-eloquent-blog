@@ -1,10 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Post;
+use App\Models\PostComment;
+use App\Models\User;
 use Faker\Factory as Faker;
-use App\Models\{PostComment, Post, User};
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PostCommentFactory extends Factory
 {
@@ -26,12 +30,8 @@ class PostCommentFactory extends Factory
 
         return [
             'body' => $faker->text,
-            'post_id' => function () {
-                return Post::first()->id;
-            },
-            'creator_id' => function () {
-                return User::first()->id;
-            },
+            'post_id' => static fn() => Post::first()->id,
+            'creator_id' => static fn() => User::first()->id,
         ];
     }
 }

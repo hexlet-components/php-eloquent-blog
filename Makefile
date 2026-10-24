@@ -16,7 +16,8 @@ reset:
 	rm db.sqlite || true
 
 lint:
-	composer exec phpcs
+	mago lint
+	mago fmt --check
 
 update-deps:
 	composer bump

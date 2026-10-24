@@ -1,10 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Post;
+use App\Models\PostLike;
+use App\Models\User;
 use Faker\Factory as Faker;
-use App\Models\{Post, User, PostLike};
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PostLikeFactory extends Factory
 {
@@ -25,12 +29,8 @@ class PostLikeFactory extends Factory
         $faker = Faker::create();
 
         return [
-            'post_id' => function () {
-                return Post::first()->id;
-            },
-            'creator_id' => function () {
-                return User::first()->id;
-            }
+            'post_id' => static fn() => Post::first()->id,
+            'creator_id' => static fn() => User::first()->id,
         ];
     }
 }

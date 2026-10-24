@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Tests;
 
 use App\config\loaders;
-use PHPUnit\Framework\TestCase;
 use Faker\Factory as FakerFactory;
 use Faker\Generator as Faker;
+use PHPUnit\Framework\TestCase;
 
 abstract class BaseTestCase extends TestCase
 {

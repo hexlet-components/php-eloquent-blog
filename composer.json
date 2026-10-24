@@ -9,8 +9,7 @@
     ],
     "scripts": {
         "phpunit": "phpunit",
-        "psysh": "psysh",
-        "phpcs": "phpcs"
+        "psysh": "psysh"
     },
     "autoload": {
         "psr-4": {
@@ -31,7 +30,6 @@
         "psy/psysh": "^0.12.16"
     },
     "require-dev": {
-        "phpunit/phpunit": "^13.0.5",
-        "squizlabs/php_codesniffer": "^4.0.1"
+        "phpunit/phpunit": "^13.0.5"
     }
 }

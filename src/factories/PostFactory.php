@@ -1,10 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Post;
+use App\Models\User;
 use Faker\Factory as Faker;
-use App\Models\{Post, User};
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PostFactory extends Factory
 {
@@ -28,9 +31,7 @@ class PostFactory extends Factory
             'title' => $faker->sentence,
             'body' => $faker->text,
             'state' => 'draft',
-            'creator_id' => function () {
-                return User::first()->id;
-            }
+            'creator_id' => static fn() => User::first()->id,
         ];
     }
 }
